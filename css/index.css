@@ -1,0 +1,77 @@
+@import "reset.css";
+@import "vars.css";
+@import "navbar.css";
+@import "footer.css";
+@import "signup_form.css";
+@import "signup_error.css";
+@import "login_error.css";
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  transition: all 0.2s ease-in-out;
+}
+
+.welcome {
+  text-transform: uppercase;
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 85vh;
+  padding: 5% 10%;
+  color: var(--class_main);
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+}
+
+.main p {
+  display: block;
+  margin: 2rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--navlink);
+  transition: all linear 0.25s;
+}
+
+li {
+  display: inline-block;
+  height: 100%;
+  margin: 0 1rem;
+}
+
+li a:hover {
+  color: var(--navlink_hover);
+}
+
+li a:active {
+  color: var(--navlink_hover);
+}
+
+.active {
+  color: var(--active_class);
+}
+
+.login-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .login-box {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+}

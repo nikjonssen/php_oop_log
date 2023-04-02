@@ -1,0 +1,9 @@
+:root {
+  --class_main: #000;
+  --active_class: blueviolet;
+  --navlink: #fff;
+  --navlink_hover: dodgerblue;
+  --navlink_back: #000;
+  --footer_color: #fff;
+  --footer_back: #000;
+}
