@@ -8,14 +8,12 @@ class Signup extends DB {
         if (!$stmt->execute([ $uid, $email])) {
             $stmt = null;
             return false;
-            exit();
         };
         
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if(count($data) == 0) {
             return false;
             $stmt = null;
-            exit();
         };
         
         $stmt = null;

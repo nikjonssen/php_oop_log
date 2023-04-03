@@ -8,14 +8,12 @@ class Login extends DB {
         if (!$stmt->execute([ $uid, $uid])) {
             $stmt = null;
             return false;
-            exit();
         };
         
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if (count($data) == 0) {
             $stmt = null;
             return false;
-            exit();
         };
         
         $pwdHashedDb = $data[0]["users_pwd"];
@@ -23,7 +21,6 @@ class Login extends DB {
         if ($checkPwd === false) {
             $stmt = null;
             return false;
-            exit();
         };
 
         $stmt = null;
