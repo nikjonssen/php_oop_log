@@ -43,7 +43,6 @@ class SignupController extends Signup {
         };
         
         header("location: ../index.php?signup=success");
-        exit();
     }
 
     private function emptyInput(){
